@@ -16,7 +16,7 @@ RUN apt-get install -y libxml2 libxt6 zlib1g-dev libbz2-dev liblzma-dev libpcre3
 
 RUN R -e 'install.packages("BiocManager")'
 
-RUN R -e 'BiocManager("biomaRt")'
+RUN R -e 'BiocManager::install("biomaRt")'
 
 ## With packages installed, create user accounts
 
